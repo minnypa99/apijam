@@ -1,0 +1,81 @@
+---
+openapi: 3.0.1
+info:
+  title: httpbin.org
+  description: A simple HTTP Request & Response Service.
+  version: 0.9.5
+servers:
+- url: http://httpbin.org
+paths:
+  /get:
+    get:
+      summary: The request's query parameters.
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /post:
+    post:
+      summary: The request's POST parameters.
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /delete:
+    delete:
+      summary: The request's DELETE parameters.
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /put:
+    put:
+      summary: The request's PUT parameters.
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /patch:
+    patch:
+      summary: The request's PATCH parameters.
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /ip:
+    get:
+      summary: Returns the requester's IP Address.
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /user-agent:
+    get:
+      summary: Return the incoming requests's User-Agent header.
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+components:
+  schemas: {}
